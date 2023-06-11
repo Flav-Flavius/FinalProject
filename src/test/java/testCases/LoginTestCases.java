@@ -1,16 +1,13 @@
 package testCases;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.BasePage;
 import pages.LoginPage;
 
 
-public class LoginPageTestCases extends BasePage {
+public class LoginTestCases extends BasePage {
     private LoginPage loginPage;
 
     @BeforeMethod
