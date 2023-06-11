@@ -39,22 +39,32 @@ public class CheckboxPageTestCases extends BasePage{
         checkboxPage.clickOnTheThirdDisabledCheckboxOption();
 
     }
-
     @Test
-    public void clickOnTheSingleCheckboxCheckmark1 () throws InterruptedException {
+    public void clickOnTheSingleCheckboxCheckmark1() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
-        WebElement SingleCheckbox = driver.findElement(By.id("AgeIsSelected"));
-        SingleCheckbox.click();
-        if (SingleCheckbox.isSelected()) ;
-        {
-            System.out.println("Checkbox is Toggle On");
-        } else  {
-            System.out.println("Checkbox is Toggle Off");
-        }
-        SingleCheckbox.click();
+        WebElement singleCheckbox = driver.findElement(By.id("isAgeSelected"));
+        singleCheckbox.click();
 
-        if (SingleCheckbox.isSelected()) {
-            System.out.println("Checkbox is now Toggle Off");
+        if (singleCheckbox.isSelected()) {
+            System.out.println("Checkbox is toggled on");
+        } else {
+            System.out.println("Checkbox is toggled off");
+        }
+        singleCheckbox.click();
+
+        if (singleCheckbox.isSelected()) {
+            System.out.println("Checkbox is now toggled off");
         }
     }
+    @Test
+    public void clickOnAllCheckboxCheckmarks() throws InterruptedException{
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div/div/ul/li[2]/a")).click();
+        checkboxPage.clickOnTheFirstCheckboxOption();
+        checkboxPage.clickOnTheSecondCheckboxOption();
+        checkboxPage.clickOnTheThirdCheckboxOption();
+        checkboxPage.clickOnTheForthCheckboxOption();
+        Assert.assertEquals(true, true);
+
+    }
+
 }

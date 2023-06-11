@@ -8,7 +8,7 @@ public class CheckboxPage extends BasePage{
         super(driver);
     }
 
-    By SingleCheckbox = By.id("AgeIsSelected");
+    By SingleCheckbox = By.id("isAgeSelected");
     public void clickOnSingleCheckbox(){ driver.findElement(SingleCheckbox).click();}
 
     By FirstCheckboxOption = By.id("ex1-check1");
@@ -16,10 +16,10 @@ public class CheckboxPage extends BasePage{
     By SecondCheckboxOption = By.id("ex1-check2");
     public void clickOnTheSecondCheckboxOption(){driver.findElement(SecondCheckboxOption).click();}
 
-    By ThirdCheckboxOption = By.id("/html/body/div[1]/div/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[4]/input");
+    By ThirdCheckboxOption = By.id("ex1-check3");
     public void clickOnTheThirdCheckboxOption(){driver.findElement(ThirdCheckboxOption).click();}
 
-    By ForthCheckboxOption = By.xpath("ex1-check3");
+    By ForthCheckboxOption = By.xpath("//*[@id=\"ex1-check3\"]");
     public void clickOnTheForthCheckboxOption(){driver.findElement(ForthCheckboxOption).click();}
 
     By CheckAllOption = By.id("box");

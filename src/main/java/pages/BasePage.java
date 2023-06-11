@@ -23,6 +23,7 @@ public class BasePage {
     public void setUp () {
         System.setProperty("web-driver.chrome.driver","C:\\Users\\Flavius\\Desktop\\JAVA\\chromedriver_win32\\chromedriver.exe");
          driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get(baseUrl);
     }
 
