@@ -27,10 +27,10 @@ public class BasePage {
         driver.get(baseUrl);
     }
 
-   /* @AfterMethod // folosim @AfterMethod ca sa inchidem browser ul dupa
+    @AfterMethod // folosim @AfterMethod ca sa inchidem browser ul dupa
 
     public void tearDown() {
 
         driver.quit();
-    }*/
+    }
 }
