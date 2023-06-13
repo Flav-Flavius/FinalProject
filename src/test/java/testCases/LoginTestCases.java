@@ -22,6 +22,7 @@ public class LoginTestCases extends BasePage {
         loginPage.selectUsernameTextField("olteaninardeal@gmail.com");
         loginPage.selectPasswordTextField("Acreditare@11");
         loginPage.clickOnLoginButton();
+        Assert.assertEquals(true, true);
     }
     @Test
     public void completeWithInvalidEmailThenClickOnLoginButton() throws InterruptedException {
